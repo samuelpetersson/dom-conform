@@ -50,7 +50,8 @@ conform.find = function(element, className, resolver) {
 		return null;
 	}
 	return null;
-},
+};
+
 if(module) {
 	module.exports = conform;
 }
