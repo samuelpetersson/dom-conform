@@ -1,0 +1,22 @@
+{
+  "name": "dom-conform",
+  "version": "1.0.0",
+  "description": "Resolve dom node class name",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samuelpetersson/dom-conform.git"
+  },
+  "keywords": [
+    "dom"
+  ],
+  "author": "Samuel Petersson <sam@f09.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samuelpetersson/dom-conform/issues"
+  },
+  "homepage": "https://github.com/samuelpetersson/dom-conform#readme"
+}
