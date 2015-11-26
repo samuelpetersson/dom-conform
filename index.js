@@ -1,14 +1,15 @@
 function conform(element, className, toggle) {
-	if(element.classList) {
+	var list = element.classList;
+	if(list) {
 		if(toggle === true) {
-			element.classList.add(className);
+			list.add(className);
 			return true;
 		}
 		if(toggle === false) {
-			element.classList.remove(className);
+			list.remove(className);
 			return false;
 		}
-		return element.classList.contains(className);
+		return list.contains(className);
 	}
 	var pattern = new RegExp("(\\s|^)" + className + "(\\s|$)");
 	var contains = pattern.test(element.className);
@@ -51,6 +52,12 @@ conform.find = function(element, className, resolver) {
 	}
 	return null;
 };
+conform.closest = function(target, className) {
+    while(target && !conform(target, className)) {
+        target = target.parentNode;
+    }	
+    return target;
+}
 
 if(module) {
 	module.exports = conform;

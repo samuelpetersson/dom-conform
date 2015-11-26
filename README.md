@@ -1,2 +1,2 @@
 # dom-conform
-Resolve dom node class name
+Resolve and find element class names

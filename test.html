@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="index.js"></script>
+	<style type="text/css">
+
+		.success .result {
+			color: #f09;
+		}
+		.success .result:after {
+			content: " Success!";
+		}
+
+	</style>
+</head>
+<body>
+
+	<div>
+		<div class="test1">
+			<span class="result">Test1:</span>
+		</div>
+
+		<div class="test2">
+			<div>
+				<div></div>
+				<div></div>
+				<div></div>
+				<div id="test2source"></div>
+			</div>
+			<span class="result">Test2:</span>
+		</div>
+	</div>
+
+
+	<script>
+
+		//Test 1: find correct element and conform to success.
+		var test1 = conform.find(document, "test1");
+		conform(test1, "success", true);
+
+		//Test 2: get closest correct element and conform to success.
+		var test2 = conform.closest(document.getElementById("test2source"), "test2");
+		conform(test2, "success", true);
+
+	</script>
+
+</body>
+</html>
